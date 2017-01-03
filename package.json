@@ -1,6 +1,6 @@
 {
   "name": "vue-i18n-xgettext",
-  "version": "0.0.1",
+  "version": "0.0.2-0",
   "description": "xgettext for vue-i18n Vue plugin",
   "repository": {
     "type": "git",
@@ -8,9 +8,12 @@
   },
   "main": "src/index.js",
   "bin": {
-      "vue-i18n-xgettext": "dist/index.js"
+    "vue-i18n-xgettext": "dist/index.js"
   },
-  "files": ["src", "dist"],
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "build": "babel --source-maps true src --out-dir dist/",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -143,8 +143,12 @@ var Extractor = function () {
           } else {
             var oldItem = itemMapping[_item.msgid];
             // TODO: deal with plurals/context
-            oldItem.references.push(_item.references);
-            oldItem.extractedComments.push(_item.extractedComments);
+            if (_item.references.length && oldItem.references.indexOf(_item.references[0]) === -1) {
+              oldItem.references.push(_item.references[0]);
+            }
+            if (_item.extractedComments.length && soldItem.extractedComments.indexOf(_item.extractedComments[0]) === -1) {
+              oldItem.extractedComments.push(_item.extractedComments[0]);
+            }
           }
         }
       } catch (err) {

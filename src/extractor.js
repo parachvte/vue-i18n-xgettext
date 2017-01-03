@@ -86,8 +86,12 @@ export default class Extractor {
       } else {
         const oldItem = itemMapping[item.msgid]
         // TODO: deal with plurals/context
-        oldItem.references.push(item.references)
-        oldItem.extractedComments.push(item.extractedComments)
+        if (item.references.length && oldItem.references.indexOf(item.references[0]) === -1) {
+          oldItem.references.push(item.references[0])
+        }
+        if (item.extractedComments.length && soldItem.extractedComments.indexOf(item.extractedComments[0]) === -1) {
+          oldItem.extractedComments.push(item.extractedComments[0])
+        }
       } 
     }
 

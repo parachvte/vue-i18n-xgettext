@@ -1,0 +1,29 @@
+{
+  "name": "vue-i18n-xgettext",
+  "version": "0.0.1",
+  "description": "xgettext for vue-i18n Vue plugin",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "dist/index",
+  "files": ["src", "dist"],
+  "scripts": {
+    "build": "babel --source-maps true src --out-dir dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "parachvte <ryannx6@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-plugin-transform-object-assign": "^6.8.0"
+  },
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "fs": "0.0.1-security",
+    "minimist": "^1.2.0",
+    "pofile": "^1.0.2"
+  }
+}

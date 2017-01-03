@@ -4,10 +4,12 @@
   "description": "xgettext for vue-i18n Vue plugin",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Ryannnnnnn/vue-i18n-xgettext"
   },
-  "main": "src",
-  "bin": {"vue-i18n-xgettext": "dist"},
+  "main": "src/index.js",
+  "bin": {
+      "vue-i18n-xgettext": "dist/index.js"
+  },
   "files": ["src", "dist"],
   "scripts": {
     "build": "babel --source-maps true src --out-dir dist/",

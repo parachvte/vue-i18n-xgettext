@@ -6,7 +6,8 @@
     "type": "git",
     "url": ""
   },
-  "main": "dist/index",
+  "main": "src",
+  "bin": {"vue-i18n-xgettext": "dist"},
   "files": ["src", "dist"],
   "scripts": {
     "build": "babel --source-maps true src --out-dir dist/",

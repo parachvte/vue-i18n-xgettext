@@ -1,6 +1,6 @@
 {
   "name": "vue-i18n-xgettext",
-  "version": "0.0.3-0",
+  "version": "0.0.3",
   "description": "xgettext for vue-i18n Vue plugin",
   "repository": {
     "type": "git",

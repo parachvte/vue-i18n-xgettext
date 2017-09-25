@@ -16,15 +16,16 @@ if (!files || files.length === 0) {
   process.exit(1)
 }
 
-const defaultAttribtues = ['v-text']
+const defaultAttributes = ['v-text']
+var finalAttributes = defaultAttributes
 if (typeof attributes === 'string') {
-  defaultAttribtues.push(attributes)
+  finalAttributes.push(attributes)
 } else {
-  defaultAttribtues.concat(attributes)
+  finalAttributes = finalAttributes.concat(attributes)
 }
 
 const extractor = new Extractor({
-  attributes: defaultAttribtues
+  attributes: finalAttributes
 })
 
 files.forEach(function (filename) {

@@ -25,15 +25,16 @@ if (!files || files.length === 0) {
   process.exit(1);
 }
 
-var defaultAttribtues = ['v-text'];
+var defaultAttributes = ['v-text'];
+var finalAttributes = defaultAttributes;
 if (typeof attributes === 'string') {
-  defaultAttribtues.push(attributes);
+  finalAttributes.push(attributes);
 } else {
-  defaultAttribtues.concat(attributes);
+  finalAttributes = finalAttributes.concat(attributes);
 }
 
 var extractor = new _extractor2.default({
-  attributes: defaultAttribtues
+  attributes: finalAttributes
 });
 
 files.forEach(function (filename) {
